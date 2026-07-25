@@ -1,0 +1,223 @@
+/* ===== Careers Page ===== */
+.careers-page {
+  padding-top: 110px;
+  padding-bottom: 60px;
+}
+
+.careers-page h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.careers-page > p {
+  text-align: center;
+  color: var(--light-text);
+  margin: 0 auto 30px;
+  max-width: 600px;
+}
+
+/* Tab Navigation */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav-tab {
+  padding: 12px 22px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 0.9rem;
+  border: none;
+  font-family: inherit;
+}
+
+.nav-tab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.nav-tab.active {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.tech-tab { background: var(--tech); }
+.people-tab { background: var(--people); }
+.nature-tab { background: var(--nature); }
+.creative-tab { background: var(--creative); }
+.builder-tab { background: var(--builder); }
+
+/* Career Categories */
+.career-category {
+  background: rgba(222, 231, 246, 0.515);
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.career-category h2 {
+  margin: 0 0 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.career-category h3 {
+  margin: 25px 0 15px;
+  color: var(--primary-dark);
+  font-size: 1.2rem;
+}
+
+.category-desc {
+  margin-bottom: 20px;
+  text-align: left;
+  color: var(--text-color);
+}
+
+.tech-category { border-left: 5px solid var(--tech); }
+.people-category { border-left: 5px solid var(--people); }
+.nature-category { border-left: 5px solid var(--nature); }
+.creative-category { border-left: 5px solid var(--creative); }
+.builder-category { border-left: 5px solid var(--builder); }
+
+.qualification-level {
+  margin-bottom: 25px;
+}
+
+/* Career Cards */
+.career-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.career-card {
+  background: var(--white);
+  padding: 18px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.career-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.career-name {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 1rem;
+}
+
+.career-description {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.qualification-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.72rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.tech-tag { background: rgba(67, 97, 238, 0.12); color: var(--tech); }
+.people-tag { background: rgba(230, 57, 70, 0.12); color: var(--people); }
+.nature-tag { background: rgba(42, 157, 143, 0.12); color: var(--nature); }
+.creative-tag { background: rgba(244, 162, 97, 0.12); color: var(--creative); }
+.builder-tag { background: rgba(106, 76, 147, 0.12); color: var(--builder); }
+
+/* Footer within careers */
+.careers-footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px 0;
+  color: var(--light-text);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .career-list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-page {
+    padding-top: 95px;
+    padding-bottom: 40px;
+  }
+
+  .careers-page h1 {
+    font-size: 1.6rem;
+  }
+
+  .nav-tabs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    padding: 0 10px;
+  }
+
+  .nav-tab {
+    text-align: center;
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .career-category {
+    padding: 20px;
+    border-left-width: 4px;
+  }
+
+  .career-category h2 {
+    font-size: 1.3rem;
+  }
+
+  .career-category h3 {
+    font-size: 1.05rem;
+  }
+
+  .career-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .career-card {
+    padding: 14px;
+  }
+
+  .career-name {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-page {
+    padding-top: 90px;
+  }
+
+  .career-category {
+    padding: 15px;
+  }
+
+  .nav-tab {
+    padding: 8px 14px;
+    font-size: 0.8rem;
+  }
+}
+
